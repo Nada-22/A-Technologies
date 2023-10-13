@@ -1,1 +1,18 @@
-<p>resource-manage works!</p>
+<div class="p-3">
+    <div class="d-flex justify-content-between">
+        <div class="d-flex gap-3 align-items-center">
+            <img src="assets/images/Group 1000009029.png" class="back" width="30" height="30" alt="">
+            <p class="mb-0">{{'MANAGE_RESOURCE.ADD_NEW_RESOURCES'|translate}}</p>
+        </div>
+        <div class="d-flex gap-3 align-items-center">
+
+            <div  class="form-check form-switch form-switch-md">
+                <label for="customSwitchsizemd" class="form-check-label">{{'MANAGE_RESOURCE.ACTIVE'|translate}}</label>
+                <input type="checkbox" id="customSwitchsizemd" class="form-check-input" [checked]="true">
+            </div>
+            <a class="btn tn-sm btn-dark">{{'MANAGE_RESOURCE.SAVE_CHANGES'|translate}}</a>
+            <a class="btn btn-sm btn-outline-danger">{{'MANAGE_RESOURCE.DELETE'|translate}}</a>
+        </div>
+
+    </div>
+</div>

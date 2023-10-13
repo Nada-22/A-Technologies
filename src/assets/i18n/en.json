@@ -1,0 +1,9 @@
+{
+    "main":"main",
+    "MANAGE_RESOURCE":{
+        "ADD_NEW_RESOURCES":"Add New Resources",
+        "ACTIVE":"Active",
+        "SAVE_CHANGES":"Save Changes",
+        "DELETE":"Delete"
+    }
+}

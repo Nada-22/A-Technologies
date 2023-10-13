@@ -2,3 +2,22 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+.rtl {
+    direction: rtl;
+    text-align: right;
+    img.back {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+  }
+  
+  /* Styles for LTR layout */
+  .ltr {
+    direction: ltr;
+    text-align: left;
+    img.back {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+  }
+

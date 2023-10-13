@@ -1,0 +1,9 @@
+{
+    "main":"القائمة",
+    "MANAGE_RESOURCE":{
+        "ADD_NEW_RESOURCES":"اضافة قوائم جديدة",
+        "ACTIVE":"مفعلة",
+        "SAVE_CHANGES":"حفظ التغييرات",
+        "DELETE":"حذف"
+    }
+}

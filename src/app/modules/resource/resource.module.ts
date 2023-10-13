@@ -7,6 +7,7 @@ import { ResourceManageComponent } from './resource-manage/resource-manage.compo
 import { MainResourceComponent } from './main-resource/main-resource.component';
 import {  NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     ResourceRoutingModule,
     NgbTypeaheadModule ,
     NgbPaginationModule,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ]
 })
 export class ResourceModule { }
