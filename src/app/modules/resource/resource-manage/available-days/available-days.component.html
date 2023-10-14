@@ -22,7 +22,7 @@
                            <div class="row" *ngFor="let workHour of item.get('workHours')?.value; let j = index"
                            [formGroupName]="j">
    
-                               <div class="col-md-4">
+                               <div class="col-md-4 col-10">
                                    <label for="start">{{'MANAGE_RESOURCE.AVAILABLE_DAYS.START'|translate}}</label>
                                    <input type="time" formControlName="from" name="" class="form-control" id="start"/>
                                </div>
