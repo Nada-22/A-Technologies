@@ -11,6 +11,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SupplierDetailsComponent } from './resource-manage/supplier-details/supplier-details.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { AvailableDaysComponent } from './resource-manage/available-days/available-days.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { ResourceEffects } from 'src/app/store/effects/resource.effects';
+import { resourceReducer } from 'src/app/store/reducers/resource.reducer';
 
 
 @NgModule({
@@ -29,7 +33,9 @@ import { AvailableDaysComponent } from './resource-manage/available-days/availab
     FormsModule,
     TranslateModule,
     NgSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forFeature('resources', resourceReducer),
+    EffectsModule.forFeature([ResourceEffects]),
     
   ]
 })

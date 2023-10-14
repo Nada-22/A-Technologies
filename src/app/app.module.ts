@@ -8,6 +8,8 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { LayoutModule } from './modules/layout/layout.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,7 +32,9 @@ export function HttpLoaderFactory(http: HttpClient) {
             deps: [HttpClient],
             
         }
-    })
+    }),
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot()
 
   ],
   providers: [],

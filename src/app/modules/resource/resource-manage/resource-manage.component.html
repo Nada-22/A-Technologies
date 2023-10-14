@@ -10,7 +10,7 @@
                 <label for="customSwitchsizemd" class="form-check-label">{{'MANAGE_RESOURCE.ACTIVE'|translate}}</label>
                 <input type="checkbox" id="customSwitchsizemd" class="form-check-input" [checked]="true">
             </div>
-            <a class="btn tn-sm btn-dark">{{'MANAGE_RESOURCE.SAVE_CHANGES'|translate}}</a>
+            <a class="btn tn-sm btn-dark" (click)="saveChanges()">{{'MANAGE_RESOURCE.SAVE_CHANGES'|translate}}</a>
             <a class="btn btn-sm btn-outline-danger">{{'MANAGE_RESOURCE.DELETE'|translate}}</a>
         </div>
 
