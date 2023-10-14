@@ -2,6 +2,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import "~@ng-select/ng-select/themes/default.theme.css";
 .rtl {
     direction: rtl;
     text-align: right;
@@ -9,6 +10,34 @@
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
       }
+      .supplier{
+        .ng-select.ng-select-single .ng-select-container {
+            
+             border-top-right-radius: 0 ;
+             border-bottom-right-radius: 0 ;
+             border-top-left-radius: 4px ;
+             border-bottom-left-radius: 4px;
+             height: 40px;
+         }
+         .counter{
+          border-top-left-radius: 0 ;
+             border-bottom-left-radius: 0;
+             border-top-right-radius: 4px !important;
+             border-bottom-right-radius: 4px !important;
+          // border-right: 4px !important;
+          // border-left: 0 !important;
+           }
+           .increment{
+            left: 4px;
+            top: 4px;
+        
+        }
+        .decrement{
+          right: 4px;
+          top: 4px;
+      
+      }
+     }
   }
   
   /* Styles for LTR layout */
@@ -19,5 +48,34 @@
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
       }
+      .supplier{
+      .ng-select.ng-select-single .ng-select-container {
+            
+             border-top-left-radius: 0 ;
+             border-bottom-left-radius: 0;
+             border-top-right-radius: 4px ;
+             border-bottom-right-radius: 4px ;
+             height: 40px;
+         }
+         .increment{
+          right: 4px;
+          top: 4px;
+      
+      }
+      .decrement{
+        left: 4px;
+        top: 4px;
+    
+    }
+     }
   }
 
+.small-font{
+  font-size: x-small;
+}
+.ng-select.ng-select-single .ng-select-container {
+  background-color: aliceblue;
+}
+.ng-value{
+  margin: auto;
+}

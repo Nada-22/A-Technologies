@@ -8,13 +8,16 @@ import { MainResourceComponent } from './main-resource/main-resource.component';
 import {  NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { SupplierDetailsComponent } from './resource-manage/supplier-details/supplier-details.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
   declarations: [
     ResourcesListComponent,
     ResourceManageComponent,
-    MainResourceComponent
+    MainResourceComponent,
+    SupplierDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +25,9 @@ import { TranslateModule } from '@ngx-translate/core';
     NgbTypeaheadModule ,
     NgbPaginationModule,
     FormsModule,
-    TranslateModule
+    TranslateModule,
+    NgSelectModule,
+    
   ]
 })
 export class ResourceModule { }

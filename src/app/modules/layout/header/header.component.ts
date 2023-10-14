@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
-  selectedLang='en';
+  selectedLang = 'en';
   constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
@@ -16,12 +16,18 @@ export class HeaderComponent implements OnInit {
 
   useLanguage(language: string): void {
     this.translate.use(language);
-    if (language=='ar') {
-      document.getElementById('lang')?.classList.remove('ltr')
-      document.getElementById('lang')?.classList.add('rtl')
-    }else{
-      document.getElementById('lang')?.classList.remove('rtl');
-      document.getElementById('lang')?.classList.add('ltr');
+    switch (language) {
+      case 'en':
+        document.getElementById('lang')?.classList.remove('rtl');
+        document.getElementById('lang')?.classList.add('ltr');
+        break;
+
+      case 'ar':
+        document.getElementById('lang')?.classList.remove('ltr')
+        document.getElementById('lang')?.classList.add('rtl')
+        break
+      default:
+        break;
     }
-}
+  }
 }

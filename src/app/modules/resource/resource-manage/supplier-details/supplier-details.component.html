@@ -1,0 +1,79 @@
+<div class="row m-sm-3 supplier">
+<div class="col-sm-6 ">
+    <div class="card mb-2 p-3">
+
+        <div class="card-body">
+    
+            <div class="input-group gap-3 align-items-center">
+    
+                <img src="assets/images/user-profile-avatar.png" class="rounded-circle col-sm-1 col-2"
+                alt="User Avatar">
+                <div class="col-9">
+                    <label for="user-name" class="mb-2"><small class="text-muted">
+                        {{'MANAGE_RESOURCE.SUPPLIER_DT.SUPPLIER_NAME'|translate}}</small></label>
+                    <input type="text" class="form-control" id="user-name">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+
+        <div class="card-body" style="font-size: smaller;">
+    
+            <small class="text-muted pe-2"> {{'MANAGE_RESOURCE.SUPPLIER_DT.CHOOSE_RESOURCE_TYPE'|translate}}</small>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> {{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURING_THE_DAY'|translate}}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">{{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURATION'|translate}}
+                    <span class="text-muted">({{'MANAGE_RESOURCE.SUPPLIER_DT.MORE_THAN_ONE_DAY'|translate}})</span> </label>
+              </div>
+              
+        </div>
+    </div>
+
+</div>
+<div class="col-sm-6">
+<div class="card">
+    <div class="card-body">
+        <label for="user-name" class="mb-2"><small class="text-muted text-end">
+            {{'MANAGE_RESOURCE.SUPPLIER_DT.SUPPLIER_IS_AVAILABLE_FOR'|translate}}</small></label>
+        <div class="input-group mb-3">
+            <input type="number" class="form-control counter" style="direction: rtl;">
+            <ng-select class="col-3">
+                <ng-option>{{'MANAGE_RESOURCE.SUPPLIER_DT.DAY'|translate}}</ng-option>
+                <ng-option>{{'MANAGE_RESOURCE.SUPPLIER_DT.MONTH'|translate}}</ng-option>
+                <ng-option>{{'MANAGE_RESOURCE.SUPPLIER_DT.YEAR'|translate}}</ng-option>
+             </ng-select>
+          </div>
+
+          <div class="d-sm-flex gap-2 small-font align-items-center">
+
+              <div class="form-check form-check-inline" style="min-width: fit-content;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1"> {{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURING_THE_DAY'|translate}}</label>
+              </div>
+              <div class="form-check form-check-inline" style="min-width: fit-content;">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">{{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURATION'|translate}}
+                    <span class="text-muted">({{'MANAGE_RESOURCE.SUPPLIER_DT.MORE_THAN_ONE_DAY'|translate}})</span> </label>
+              </div>
+              <div class="input-group position-relative counter-input">
+                <span class="input-group-btn position-absolute decrement">
+                  <button class="btn btn-sm btn-primary" (click)="decrement()">-</button>
+                </span>
+                <div class="form-control text-center">
+                {{count}}
+                </div>
+                <span class="input-group-btn position-absolute increment">
+                  <button class="btn btn-sm btn-primary" (click)="increment()">+</button>
+                </span>
+              </div>
+          </div>
+    </div>
+
+</div>
+</div>
+</div>

@@ -1,0 +1,11 @@
+.ltr{
+
+
+}
+.rtl{
+   
+}
+.counter-input .input-group .form-control:focus {
+    border-right: none; /* Remove the right border on input focus */
+    border-radius: 4px; /* Add rounded corners to the input on focus */
+  }
