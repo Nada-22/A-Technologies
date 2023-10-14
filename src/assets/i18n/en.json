@@ -14,7 +14,13 @@
             "SUPPLIER_IS_AVAILABLE_FOR":"Supplier is available for",
             "DAY":"Day",
             "MONTH":"Month",
-            "YEAR":"Year"
+            "YEAR":"Year",
+            "TIME":"time",
+            "MULTI_BOOKING":"multi booking",
+            "SERVICE_TIME":"Service time",
+            "FIXED_TIME":"Fixed time",
+            "SINGLE_BOOKING":"Single Booking",
+            "BOOKING_MORE":"Booking more than one person for the same appointment"
         }
     }
 }

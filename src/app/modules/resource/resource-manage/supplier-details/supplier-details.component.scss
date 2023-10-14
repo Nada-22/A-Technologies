@@ -1,11 +1,33 @@
 .ltr{
 
 
+  .counter-input  {
+       /* Remove the right border on input focus */
+  
+      width: 23%;
+      text-align: end;
+      margin-left: auto;
+    }
 }
 .rtl{
+  .counter-input  {
+    /* Remove the right border on input focus */
+
+   width: 40%;
+   text-align: start;
+   margin-right: auto;
+ }
+ .form-check .form-check-input {
+  float: right;
+  margin-left: .5em;
+}
+
    
 }
-.counter-input .input-group .form-control:focus {
-    border-right: none; /* Remove the right border on input focus */
-    border-radius: 4px; /* Add rounded corners to the input on focus */
-  }
+.counter-div{
+  
+  border-radius: 8px !important;
+}
+.resource-type{
+  margin-top: 2.5rem;
+}

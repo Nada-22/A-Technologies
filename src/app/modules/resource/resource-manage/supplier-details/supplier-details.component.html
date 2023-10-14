@@ -1,6 +1,6 @@
 <div class="row m-sm-3 supplier">
 <div class="col-sm-6 ">
-    <div class="card mb-2 p-3">
+    <div class="card mb-4 p-3">
 
         <div class="card-body">
     
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card resource-type">
 
         <div class="card-body" style="font-size: smaller;">
     
@@ -49,29 +49,60 @@
              </ng-select>
           </div>
 
-          <div class="d-sm-flex gap-2 small-font align-items-center">
+          <div class="small-font">
 
-              <div class="form-check form-check-inline" style="min-width: fit-content;">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1"> {{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURING_THE_DAY'|translate}}</label>
-              </div>
-              <div class="form-check form-check-inline" style="min-width: fit-content;">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">{{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURATION'|translate}}
-                    <span class="text-muted">({{'MANAGE_RESOURCE.SUPPLIER_DT.MORE_THAN_ONE_DAY'|translate}})</span> </label>
-              </div>
-              <div class="input-group position-relative counter-input">
-                <span class="input-group-btn position-absolute decrement">
-                  <button class="btn btn-sm btn-primary" (click)="decrement()">-</button>
-                </span>
-                <div class="form-control text-center">
-                {{count}}
-                </div>
-                <span class="input-group-btn position-absolute increment">
-                  <button class="btn btn-sm btn-primary" (click)="increment()">+</button>
-                </span>
+              <small class="text-muted pe-2"> {{'MANAGE_RESOURCE.SUPPLIER_DT.TIME'|translate}}
+              
+              </small>
+              <div class="d-sm-flex gap-2 align-items-center">
+                  <div class="form-check form-check-inline" style="min-width: fit-content;">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">
+                        <img src="../../../../../assets/images/box-time.png" class="me-2" width="15" alt="">
+                         <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.SERVICE_TIME'|translate}}</small></label>
+                  </div>
+                  <div class="form-check form-check-inline" style="min-width: fit-content;">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">
+                        <img src="../../../../../assets/images/clock.png" class="me-2" width="15" alt="">
+                        <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.FIXED_TIME'|translate}}</small>
+                         </label>
+                  </div>
+                  <div class="input-group position-relative counter-input">
+                    <span class="input-group-btn position-absolute decrement">
+                      <button class="btn btn-sm btn-primary" (click)="decrement()">-</button>
+                    </span>
+                    <div class="form-control text-center counter-div">
+                    {{count}}
+                    </div>
+                    <span class="input-group-btn position-absolute increment">
+                      <button class="btn btn-sm btn-primary" (click)="increment()">+</button>
+                    </span>
+                  </div>
               </div>
           </div>
+          <div class="small-font">
+
+            <small class="text-muted pe-2"> {{'MANAGE_RESOURCE.SUPPLIER_DT.MULTI_BOOKING'|translate}}
+                <img src="../../../../../assets/images/Group 1000009920.png" width="15" alt="">
+            </small>
+            <div class="d-sm-flex gap-2 align-items-center">
+                <div class="form-check form-check-inline" style="min-width: fit-content;">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                  <label class="form-check-label" for="inlineRadio1">
+                      <img src="../../../../../assets/images/Vector (4).png" class="me-2" width="15" alt="">
+                       <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.SINGLE_BOOKING'|translate}}</small></label>
+                </div>
+                <div class="form-check form-check-inline" style="min-width: fit-content;">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                  <label class="form-check-label" for="inlineRadio2">
+                      <img src="../../../../../assets/images/Group 1000009043.png" class="me-2" width="15" alt="">
+                      <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.BOOKING_MORE'|translate}}</small>
+                       </label>
+                </div>
+                <input type="number" name="" class="form-control" id="">
+            </div>
+        </div>
     </div>
 
 </div>

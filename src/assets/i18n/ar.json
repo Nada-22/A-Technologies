@@ -4,6 +4,23 @@
         "ADD_NEW_RESOURCES":"اضافة قوائم جديدة",
         "ACTIVE":"مفعلة",
         "SAVE_CHANGES":"حفظ التغييرات",
-        "DELETE":"حذف"
+        "DELETE":"حذف",
+        "SUPPLIER_DT":{
+            "SUPPLIER_NAME":"اسم المورد",
+            "CHOOSE_RESOURCE_TYPE":"اختر نوع الموارد",
+            "BOOK_DURING_THE_DAY":"حجز خلال اليوم",
+            "BOOK_DURATION":"حجز مدة",
+            "MORE_THAN_ONE_DAY":"اكثر من يوم واحد",
+            "SUPPLIER_IS_AVAILABLE_FOR":"المورد متاح الي",
+            "DAY":"يوم",
+            "MONTH":"شهر",
+            "YEAR":"سنة",
+            "TIME":"وقت المورد",
+            "MULTI_BOOKING":"الحجز المتعدد",
+            "SERVICE_TIME":"وقت الخدمة",
+            "FIXED_TIME":"وقت ثابت",
+            "SINGLE_BOOKING":"حجز واحد فقط",
+            "BOOKING_MORE":"حجز اكثر من شخص لنفس الموعد"
+        }
     }
 }
