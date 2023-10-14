@@ -1,0 +1,54 @@
+<div class="card">
+    <div class="card-body">
+        <div>
+            <p class="card-title">{{'MANAGE_RESOURCE.AVAILABLE_DAYS.WORKING_HOURS'|translate}}</p>
+            <p class="text-muted small-font">{{'MANAGE_RESOURCE.AVAILABLE_DAYS.SETTING'|translate}}</p>
+        </div>
+        <div class="m-2" [formGroup]="workDaysForm">
+
+            <div  formArrayName="daysOfWeek" *ngFor="let item of daysOfWeek.controls; let i = index">
+               <div class="d-sm-flex gap-3 my-4" [formGroupName]="i">
+
+                   <div class="form-check form-switch form-switch-md mt-2" style="min-width: 150px;">
+                       <label for="customSwitchsizemd" class="form-check-label">
+                           {{'MANAGE_RESOURCE.AVAILABLE_DAYS.'+item.value.name|translate}}</label>
+                       <input type="checkbox" id="customSwitchsizemd" class="form-check-input" [checked]="item.value.active"
+                           (change)="changeDayStatus(item,$event.target)">
+                   </div>
+                   <div class="w-100" *ngIf="item.value.active">
+   
+                       <div formArrayName="workHours">
+   
+                           <div class="row" *ngFor="let workHour of item.get('workHours')?.value; let j = index"
+                           [formGroupName]="j">
+   
+                               <div class="col-md-4">
+                                   <label for="start">{{'MANAGE_RESOURCE.AVAILABLE_DAYS.START'|translate}}</label>
+                                   <input type="time" formControlName="from" name="" class="form-control" id="start"/>
+                               </div>
+                               <div class="col-md-4 col-10">
+                                   <label for="end">{{'MANAGE_RESOURCE.AVAILABLE_DAYS.END'|translate}}</label>
+                                   <input type="time" formControlName="to" name="" class="form-control" id="end">
+                               </div>
+                               <div class="col-md-1 col-1 align-self-end">
+   
+                                   <img *ngIf="j==0" src="../../../../../assets/images/Group 1000009818.png" class="mb-2"
+                                       width="20" alt="" (click)="addWorkHour(item)">
+                                   <img *ngIf="j>0" src="../../../../../assets/images/Group 1000010268.png" class="mb-2"
+                                       width="20" alt="" (click)="removeWorkHour(item,j)">
+                               </div>
+                           </div>
+                           <div *ngIf="errorMessage!=''">
+                               <div style="color:red;">{{errorMessage}}</div>
+   
+                           </div>
+                       </div>
+   
+                   </div>
+               </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

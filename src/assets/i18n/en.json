@@ -1,26 +1,39 @@
 {
-    "main":"main",
-    "MANAGE_RESOURCE":{
-        "ADD_NEW_RESOURCES":"Add New Resources",
-        "ACTIVE":"Active",
-        "SAVE_CHANGES":"Save Changes",
-        "DELETE":"Delete",
-        "SUPPLIER_DT":{
-            "SUPPLIER_NAME":"Supplier Name",
-            "CHOOSE_RESOURCE_TYPE":"Choose Resource Type",
-            "BOOK_DURING_THE_DAY":"Book during the day",
-            "BOOK_DURATION":"Booking duration",
-            "MORE_THAN_ONE_DAY":"more than one day",
-            "SUPPLIER_IS_AVAILABLE_FOR":"Supplier is available for",
-            "DAY":"Day",
-            "MONTH":"Month",
-            "YEAR":"Year",
-            "TIME":"time",
-            "MULTI_BOOKING":"multi booking",
-            "SERVICE_TIME":"Service time",
-            "FIXED_TIME":"Fixed time",
-            "SINGLE_BOOKING":"Single Booking",
-            "BOOKING_MORE":"Booking more than one person for the same appointment"
+    "main": "main",
+    "MANAGE_RESOURCE": {
+        "ADD_NEW_RESOURCES": "Add New Resources",
+        "ACTIVE": "Active",
+        "SAVE_CHANGES": "Save Changes",
+        "DELETE": "Delete",
+        "SUPPLIER_DT": {
+            "SUPPLIER_NAME": "Supplier Name",
+            "CHOOSE_RESOURCE_TYPE": "Choose Resource Type",
+            "BOOK_DURING_THE_DAY": "Book during the day",
+            "BOOK_DURATION": "Booking duration",
+            "MORE_THAN_ONE_DAY": "more than one day",
+            "SUPPLIER_IS_AVAILABLE_FOR": "Supplier is available for",
+            "DAY": "Day",
+            "MONTH": "Month",
+            "YEAR": "Year",
+            "TIME": "time",
+            "MULTI_BOOKING": "multi booking",
+            "SERVICE_TIME": "Service time",
+            "FIXED_TIME": "Fixed time",
+            "SINGLE_BOOKING": "Single Booking",
+            "BOOKING_MORE": "Booking more than one person for the same appointment"
+        },
+        "AVAILABLE_DAYS": {
+            "SATURDAY": "Saturday",
+            "SUNDAY": "Sunday",
+            "MONDAY": "Monday",
+            "TUESDAY": "Tuesday",
+            "WEDNESDAY": "Wednesday",
+            "THURSDAY": "Thursday",
+            "FRIDAY": "Friday",
+            "WORKING_HOURS":"Determine the supplier's working hours",
+            "SETTING":"Configure your week settings here.Simply move the sliders and add/remove break times to set up work hours.",
+            "START":"Start",
+            "END":"End"
         }
     }
 }

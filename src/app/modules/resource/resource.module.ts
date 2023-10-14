@@ -6,10 +6,11 @@ import { ResourcesListComponent } from './resources-list/resources-list.componen
 import { ResourceManageComponent } from './resource-manage/resource-manage.component';
 import { MainResourceComponent } from './main-resource/main-resource.component';
 import {  NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { SupplierDetailsComponent } from './resource-manage/supplier-details/supplier-details.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { AvailableDaysComponent } from './resource-manage/available-days/available-days.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     ResourcesListComponent,
     ResourceManageComponent,
     MainResourceComponent,
-    SupplierDetailsComponent
+    SupplierDetailsComponent,
+    AvailableDaysComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     FormsModule,
     TranslateModule,
     NgSelectModule,
+    ReactiveFormsModule
     
   ]
 })
