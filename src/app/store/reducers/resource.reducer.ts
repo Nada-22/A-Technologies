@@ -37,7 +37,6 @@ export const resourceReducer = createReducer(
   }),
   on(ResourceActions.deleteResource, (state, { id }) => {
     
-  
     Swal.fire(
       'Deleted',
       'Resource deleted successfully',

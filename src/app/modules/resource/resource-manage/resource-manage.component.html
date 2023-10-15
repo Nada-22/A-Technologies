@@ -7,11 +7,11 @@
         <div class="d-sm-flex gap-3 align-items-center">
 
             <div  class="form-check form-switch form-switch-md mb-2">
-                <label for="customSwitchsizemd1" class="form-check-label">{{'MANAGE_RESOURCE.ACTIVE'|translate}}</label>
-                <input [(ngModel)]="active" type="checkbox" id="customSwitchsizemd1" class="form-check-input">
+                <label for="user-active" class="form-check-label">{{'MANAGE_RESOURCE.ACTIVE'|translate}}</label>
+                <input [(ngModel)]="active" type="checkbox" id="user-active" class="form-check-input">
             </div>
             <button class="btn btn-sm btn-dark mb-2 controler" (click)="saveChanges()">{{'MANAGE_RESOURCE.SAVE_CHANGES'|translate}}</button>
-            <button class="btn btn-sm btn-outline-danger mb-2 controler" (click)="deleteResource()">{{'MANAGE_RESOURCE.DELETE'|translate}}</button>
+            <button *ngIf="resourceID" class="btn btn-sm btn-outline-danger mb-2 controler" (click)="deleteResource()">{{'MANAGE_RESOURCE.DELETE'|translate}}</button>
         </div>
 
     </div>

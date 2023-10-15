@@ -49,9 +49,17 @@
         }
     },
     "GENERAL":{
-        "CONFIRM_DELETE":"Are you sure you want to delete this Resource?",
+        "CONFIRM_DELETE":"Are you sure?",
         "RESOURCE_DELETED_SUCCESSFULLY":"Resource Deleted Successfully",
         "RESOURCE_UPDATED_SUCCESSFULLY":"Resource Updated Successfully",
-        "RESOURCE_ADDED_SUCCESSFULLY":"Resource Added Successfully"
+        "RESOURCE_ADDED_SUCCESSFULLY":"Resource Added Successfully",
+        "ERROR_MESSAGE":"An error occurred, please try again later.",
+        "CANCEL":"Cancel",
+        "YOU_WON/T_BE_ABLE_TO_REVERT_THIS":"You won't be able to revert this",
+        "YES_DELETE_IT":"Yes, delete it!",
+        "NO":"No",
+        "NOT_DELETED":"Not deleted",
+        "NO_RESOURCE_FOUNDED":"no resource found , try again later"
+
     }
 }

@@ -1,3 +1,4 @@
+import  Swal  from 'sweetalert2';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SupplierDetailsComponent } from './supplier-details/supplier-details.component';
 import { Store } from '@ngrx/store';
@@ -27,7 +28,7 @@ export class ResourceManageComponent implements OnInit {
   constructor(private store: Store,
     private resourceService: ResourceService,
     private route: ActivatedRoute,
-    private _translate:TranslateService) {
+    private _translate: TranslateService) {
 
     this.resourceID = Number(this.route.snapshot.paramMap.get('id'))
     console.log(this.resourceID);
@@ -67,9 +68,31 @@ export class ResourceManageComponent implements OnInit {
   }
   deleteResource() {
 
-    if (confirm( this._translate.instant('GENERAL.CONFIRM_DELETE'))) {
-      this.resourceService.deleteResource(this.resourceID)
+    //swal confirm
+    
+    Swal.fire({
+      title: this._translate.instant('GENERAL.CONFIRM_DELETE'),
+      text: this._translate.instant('GENERAL.YOU_WON/T_BE_ABLE_TO_REVERT_THIS'),
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: this._translate.instant('GENERAL.YES_DELETE_IT'),
+       cancelButtonText: this._translate.instant('GENERAL.NO')
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed){
+          if (this.resourceID) {
+            
+            this.resourceService.deleteResource(this.resourceID)
+          }else{
+            Swal.fire(
+              this._translate.instant('GENERAL.NOT_DELETED'),
+              this._translate.instant('GENERAL.NO_RESOURCE_FOUNDED'),
+                'error'
+                );
+          }
+         
+            }
+            })
 
-    }
   }
 }
