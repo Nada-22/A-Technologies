@@ -50,9 +50,16 @@
         }
     },
     "GENERAL":{
-        "CONFIRM_DELETE":"هل انت متأكد انك تريد حذف هذه الموارد",
+        "CONFIRM_DELETE":"هل انت متأكد ؟",
         "RESOURCE_DELETED_SUCCESSFULLY":"تم حذف الموارد بنجاح",
         "RESOURCE_UPDATED_SUCCESSFULLY":"تم تعديل الموارد بنجاح",
-        "RESOURCE_ADDED_SUCCESSFULLY":"تم اضافة الموارد بنجاح"
+        "RESOURCE_ADDED_SUCCESSFULLY":"تم اضافة الموارد بنجاح",
+        "ERROR_MESSAGE":"شيء ما حدث , الرجاء اعادة المحاولة لاحقا.",
+        "CANCEL":"الغاء",
+        "YOU_WON/T_BE_ABLE_TO_REVERT_THIS":"لا يمكنك استرجاع  المورد مجداا",
+        "YES_DELETE_IT":"نعم , قم بالحذف",
+        "NO":"لا",
+        "NOT_DELETED":"لم يتم الحذف",
+        "NO_RESOURCE_FOUNDED":"لا يمكن العثور علي هذه الموارد , بالرجاء المحاولة لاحقا"
     }
 }
