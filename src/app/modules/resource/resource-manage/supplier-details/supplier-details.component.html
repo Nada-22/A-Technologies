@@ -29,15 +29,15 @@
                 <small class="text-muted pe-2"> {{'MANAGE_RESOURCE.SUPPLIER_DT.CHOOSE_RESOURCE_TYPE'|translate}}</small>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" formControlName="resourceType" type="radio" name="resourceType"
-                        id="inlineRadio1" value="during_day">
-                    <label class="form-check-label" for="inlineRadio1">
+                        id="during_day" value="during_day">
+                    <label class="form-check-label" for="during_day">
                         {{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURING_THE_DAY'|translate}}</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" formControlName="resourceType" type="radio" name="resourceType"
-                        id="inlineRadio2" value="duration">
+                        id="duration" value="duration">
                     <label class="form-check-label"
-                        for="inlineRadio2">{{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURATION'|translate}}
+                        for="duration">{{'MANAGE_RESOURCE.SUPPLIER_DT.BOOK_DURATION'|translate}}
                         <span class="text-muted">({{'MANAGE_RESOURCE.SUPPLIER_DT.MORE_THAN_ONE_DAY'|translate}})</span>
                     </label>
                 </div>
@@ -55,9 +55,9 @@
                     <input type="number" formControlName="supplierAvailable" class="form-control counter"
                         style="direction: rtl;" min="0">
                     <ng-select class="col-3" formControlName="type">
-                        <ng-option>{{'MANAGE_RESOURCE.SUPPLIER_DT.DAY'|translate}}</ng-option>
-                        <ng-option>{{'MANAGE_RESOURCE.SUPPLIER_DT.MONTH'|translate}}</ng-option>
-                        <ng-option>{{'MANAGE_RESOURCE.SUPPLIER_DT.YEAR'|translate}}</ng-option>
+                        <ng-option [value]="'day'">{{'MANAGE_RESOURCE.SUPPLIER_DT.DAY'|translate}}</ng-option>
+                        <ng-option [value]="'month'">{{'MANAGE_RESOURCE.SUPPLIER_DT.MONTH'|translate}}</ng-option>
+                        <ng-option [value]="'year'">{{'MANAGE_RESOURCE.SUPPLIER_DT.YEAR'|translate}}</ng-option>
                     </ng-select>
                 </div>
 
@@ -69,15 +69,15 @@
                     <div class="d-lg-flex gap-2 align-items-center">
                         <div class="form-check form-check-inline col-lg-3 my-2">
                             <input class="form-check-input" type="radio" formControlName="supplierTime" name="supplierTime"
-                                id="inlineRadio1" value="service_time">
-                            <label class="form-check-label" for="inlineRadio1">
+                                id="supplierTime" value="service_time">
+                            <label class="form-check-label" for="supplierTime">
                                 <img src="../../../../../assets/images/box-time.png" class="me-2" width="15" alt="">
                                 <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.SERVICE_TIME'|translate}}</small></label>
                         </div>
                         <div class="form-check form-check-inline col-lg-5 my-2">
                             <input class="form-check-input" type="radio" name="supplierTime" formControlName="supplierTime"
-                                id="inlineRadio2" value="fixed">
-                            <label class="form-check-label" for="inlineRadio2">
+                                id="fixed" value="fixed">
+                            <label class="form-check-label" for="fixed">
                                 <img src="../../../../../assets/images/clock.png" class="me-2" width="15" alt="">
                                 <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.FIXED_TIME'|translate}}</small>
                             </label>
@@ -105,15 +105,15 @@
                     <div class="d-lg-flex gap-2 align-items-center">
                         <div class="form-check form-check-inline col-lg-3 my-2">
                             <input class="form-check-input" type="radio" name="booking" formControlName="booking"
-                                id="inlineRadio1" value="single">
-                            <label class="form-check-label" for="inlineRadio1">
+                                id="single" value="single">
+                            <label class="form-check-label" for="single">
                                 <img src="../../../../../assets/images/Vector (4).png" class="me-2" width="15" alt="">
                                 <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.SINGLE_BOOKING'|translate}}</small></label>
                         </div>
                         <div class="form-check form-check-inline col-lg-5 my-2">
                             <input class="form-check-input" type="radio" name="booking" formControlName="booking"
-                                id="inlineRadio2" value="multi">
-                            <label class="form-check-label" for="inlineRadio2">
+                                id="multi" value="multi">
+                            <label class="form-check-label" for="multi">
                                 <img src="../../../../../assets/images/Group 1000009043.png" class="me-2" width="15"
                                     alt="">
                                 <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.BOOKING_MORE'|translate}}</small>
@@ -122,7 +122,7 @@
                         <div class="col-lg-3 my-2">
 
                             <input *ngIf="supplierForm.value.booking=='multi'" type="number" min="2"
-                                class="form-control" id="" formControlName="bookingMulti">
+                                class="form-control" formControlName="bookingMulti">
                         </div>
                     </div>
                 </div>

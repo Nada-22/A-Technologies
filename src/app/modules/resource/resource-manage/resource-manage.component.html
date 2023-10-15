@@ -1,17 +1,17 @@
 <div class="p-3">
     <div class="d-sm-flex d-block justify-content-between">
         <div class="d-flex gap-3 align-items-center mb-2">
-            <img src="assets/images/Group 1000009029.png" routerLink="/recourse/list" class="back" width="30" height="30" alt="">
+            <img src="assets/images/Group 1000009029.png" routerLink="/resource/list" class="back" width="30" height="30" alt="">
             <p class="mb-0">{{'MANAGE_RESOURCE.ADD_NEW_RESOURCES'|translate}}</p>
         </div>
         <div class="d-sm-flex gap-3 align-items-center">
 
             <div  class="form-check form-switch form-switch-md mb-2">
-                <label for="customSwitchsizemd" class="form-check-label">{{'MANAGE_RESOURCE.ACTIVE'|translate}}</label>
-                <input [(ngModel)]="active" type="checkbox" id="customSwitchsizemd" class="form-check-input">
+                <label for="customSwitchsizemd1" class="form-check-label">{{'MANAGE_RESOURCE.ACTIVE'|translate}}</label>
+                <input [(ngModel)]="active" type="checkbox" id="customSwitchsizemd1" class="form-check-input">
             </div>
             <button class="btn btn-sm btn-dark mb-2 controler" (click)="saveChanges()">{{'MANAGE_RESOURCE.SAVE_CHANGES'|translate}}</button>
-            <button class="btn btn-sm btn-outline-danger mb-2 controler">{{'MANAGE_RESOURCE.DELETE'|translate}}</button>
+            <button class="btn btn-sm btn-outline-danger mb-2 controler" (click)="deleteResource()">{{'MANAGE_RESOURCE.DELETE'|translate}}</button>
         </div>
 
     </div>

@@ -10,9 +10,9 @@
                <div class="d-sm-flex gap-3 my-4" [formGroupName]="i">
 
                    <div class="form-check form-switch form-switch-md mt-2" style="min-width: 150px;">
-                       <label for="customSwitchsizemd" class="form-check-label">
+                       <label [for]="item.value.name" class="form-check-label">
                            {{'MANAGE_RESOURCE.AVAILABLE_DAYS.'+item.value.name|translate}}</label>
-                       <input type="checkbox" id="customSwitchsizemd" class="form-check-input" [checked]="item.value.active"
+                       <input type="checkbox" [id]="item.value.name" class="form-check-input" [checked]="item.value.active"
                            (change)="changeDayStatus(item,$event.target)">
                    </div>
                    <div class="w-100" *ngIf="item.value.active">

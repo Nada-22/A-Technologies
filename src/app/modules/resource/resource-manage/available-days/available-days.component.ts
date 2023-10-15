@@ -1,4 +1,4 @@
-import { reducers } from './../../../../store/index';
+// import { reducers } from './../../../../store/index';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, Validators, AbstractControl } from '@angular/forms';
 

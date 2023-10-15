@@ -1,0 +1,35 @@
+.rtl {
+    direction: rtl;
+    text-align: right;
+    img.back {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+      .supplier{
+        .ng-select.ng-select-single .ng-select-container {
+            
+             border-top-right-radius: 0 ;
+             border-bottom-right-radius: 0 ;
+             border-top-left-radius: 4px ;
+             border-bottom-left-radius: 4px;
+             height: 40px;
+         }
+         .counter{
+          border-top-left-radius: 0 ;
+             border-bottom-left-radius: 0;
+             border-top-right-radius: 4px !important;
+             border-bottom-right-radius: 4px !important;
+         
+           }
+           .increment{
+            left: 4px;
+            top: 4px;
+        
+        }
+        .decrement{
+          right: 4px;
+          top: 4px;
+      
+      }
+     }
+  }

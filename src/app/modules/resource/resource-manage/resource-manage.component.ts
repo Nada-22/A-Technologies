@@ -8,6 +8,7 @@ import { ResourceService } from 'src/app/services/resource.service';
 import * as ResourceSelectors from '../../../store/selectors/resource.selector';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -16,48 +17,59 @@ import { Observable } from 'rxjs';
   styleUrls: ['./resource-manage.component.scss']
 })
 export class ResourceManageComponent implements OnInit {
-  active=true;
-  resource !:Resource;
-  resourceID=0;
-  resource$!:Observable<Resource | null> ;
+  active = true;
+  resource !: Resource;
+  resourceID = 0;
+  resource$!: Observable<Resource | null>;
 
   @ViewChild(SupplierDetailsComponent) SupplierDetails!: SupplierDetailsComponent;
   @ViewChild(AvailableDaysComponent) AvailableDays!: AvailableDaysComponent;
-  constructor(private store: Store,private resourceService:ResourceService,private route:ActivatedRoute) { 
+  constructor(private store: Store,
+    private resourceService: ResourceService,
+    private route: ActivatedRoute,
+    private _translate:TranslateService) {
 
-  this.resourceID = Number(this.route.snapshot.paramMap.get('id'))
-  console.log(this.resourceID);
-  
+    this.resourceID = Number(this.route.snapshot.paramMap.get('id'))
+    console.log(this.resourceID);
+
   }
 
   ngOnInit(): void {
     this.resource$ = this.store.select(ResourceSelectors.selectResourceById(this.resourceID));
     this.resource$.subscribe({
-      next:(res:any)=>{
-     
+      next: (res: any) => {
+
         if (res) {
-          
-          this.resource=res;
-          this.active=res.active       
+
+          this.resource = res;
+          this.active = res.active
         }
       }
     })
   }
-  
 
-  saveChanges(){
-    this.resource={...this.SupplierDetails.supplierForm.value,
-      ...this.AvailableDays.workDaysForm.value,active:this.active,id:this.resourceID}
-      console.log(this.resource);
-      
+
+  saveChanges() {
+    this.resource = {
+      ...this.SupplierDetails.supplierForm.value,
+      ...this.AvailableDays.workDaysForm.value, active: this.active, id: this.resourceID
+    }
+    console.log(this.resource);
+
     if (this.resourceID) {
       this.resourceService.updateResource(this.resource)
-    }else{
+    } else {
 
       this.resourceService.addResource(this.resource)
     }
     console.log(this.resource);
-    // this.store.dispatch(addResource({ resource: this.resource }))
-    
+
+  }
+  deleteResource() {
+
+    if (confirm( this._translate.instant('GENERAL.CONFIRM_DELETE'))) {
+      this.resourceService.deleteResource(this.resourceID)
+
+    }
   }
 }

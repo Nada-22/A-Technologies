@@ -1,5 +1,16 @@
 {
     "main": "main",
+    "RESOURCE_LIST":{
+        "NAME":"Name",
+        "ID":"ID",
+        "RESOURCE_TYPE":"Resource Type",
+        "IMAGE":"Image",
+        "AVAILABLE_TIME":"Available time",
+        "ACTIVE":"Active",
+        "ACTIONS":"Actions",
+        "EDIT":"Edit",
+        "ADD_RESOURCE":"Add Resource"
+    },
     "MANAGE_RESOURCE": {
         "ADD_NEW_RESOURCES": "Add New Resources",
         "ACTIVE": "Active",
@@ -36,5 +47,11 @@
             "START":"Start",
             "END":"End"
         }
+    },
+    "GENERAL":{
+        "CONFIRM_DELETE":"Are you sure you want to delete this Resource?",
+        "RESOURCE_DELETED_SUCCESSFULLY":"Resource Deleted Successfully",
+        "RESOURCE_UPDATED_SUCCESSFULLY":"Resource Updated Successfully",
+        "RESOURCE_ADDED_SUCCESSFULLY":"Resource Added Successfully"
     }
 }

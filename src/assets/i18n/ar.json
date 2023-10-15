@@ -1,5 +1,16 @@
 {
     "main":"القائمة",
+    "RESOURCE_LIST":{
+        "NAME":"الاسم",
+        "ID":"الرقم التسلسلي",
+        "RESOURCE_TYPE":"نوع الخدمة",
+        "IMAGE":"صورة",
+        "AVAILABLE_TIME":"الوقت المتاح",
+        "ACTIVE":"نشط",
+        "ACTIONS":"أجراءات",
+        "EDIT":"تعديل",
+        "ADD_RESOURCE":"اضافة موارد"
+    },
     "MANAGE_RESOURCE":{
         "ADD_NEW_RESOURCES":"اضافة قوائم جديدة",
         "ACTIVE":"مفعلة",
@@ -37,5 +48,11 @@
             "START":"وقت البدء",
             "END":"وقت الانتهاء"
         }
+    },
+    "GENERAL":{
+        "CONFIRM_DELETE":"هل انت متأكد انك تريد حذف هذه الموارد",
+        "RESOURCE_DELETED_SUCCESSFULLY":"تم حذف الموارد بنجاح",
+        "RESOURCE_UPDATED_SUCCESSFULLY":"تم تعديل الموارد بنجاح",
+        "RESOURCE_ADDED_SUCCESSFULLY":"تم اضافة الموارد بنجاح"
     }
 }

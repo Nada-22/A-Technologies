@@ -1,35 +1,38 @@
 <div class="">
-  <form class="p-5">
+  <form class="p-md-5">
     <div class="text-end">
-      <a class="btn btn-primary btn-sm my-4 " routerLink="/recourse/add">add resource</a>
+      <a class="btn btn-dark btn-sm my-4 " routerLink="/resource/add">{{'RESOURCE_LIST.ADD_RESOURCE'|translate}}</a>
     </div>
 
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col" sortable="name">name</th>
-          <th scope="col" sortable="name">image</th>
-          <th scope="col" sortable="area">resourceType</th>
-          <th scope="col" sortable="population">available time</th>
-          <th scope="col" sortable="population">active</th>
-          <th scope="col" sortable="population">actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let resource of resources$|async;let i =index">
-          <td scope="row">{{ resource.id }}</td>
-          <td><ngb-highlight [result]="resource.name"></ngb-highlight></td>
-          <td><img [src]=" resource.image||'assets/images/user-profile-avatar.png' " width="30"
-              class="me-2 rounded-circle image-fluid"></td>
-          <td><ngb-highlight [result]="resource.resourceType "></ngb-highlight></td>
-          <td><ngb-highlight [result]="resource.supplierAvailable +' '+resource.type"></ngb-highlight></td>
-          <td>{{resource.active}}</td>
-          <td routerLink="/recourse/{{resource.id}}"><button class="btn btn-sm btn-info">edit</button></td>
+    <div class="table-responsive">
 
-        </tr>
-      </tbody>
-    </table>
+      <table class="table table-striped text-nowrap">
+        <thead>
+          <tr>
+            <th scope="col">{{'RESOURCE_LIST.ID'|translate}}</th>
+            <th scope="col" sortable="name">{{'RESOURCE_LIST.NAME'|translate}}</th>
+            <th scope="col" sortable="name">{{'RESOURCE_LIST.IMAGE'|translate}}</th>
+            <th scope="col" sortable="area">{{'RESOURCE_LIST.RESOURCE_TYPE'|translate}}</th>
+            <th scope="col" sortable="population">{{'RESOURCE_LIST.AVAILABLE_TIME'|translate}}</th>
+            <th scope="col" sortable="population">{{'RESOURCE_LIST.ACTIVE'|translate}}</th>
+            <th scope="col" sortable="population">{{'RESOURCE_LIST.ACTIONS'|translate}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let resource of resources$|async;let i =index">
+            <td scope="row">{{ resource.id }}</td>
+            <td><ngb-highlight [result]="resource.name"></ngb-highlight></td>
+            <td><img [src]=" resource.image||'assets/images/user-profile-avatar.png' " width="30"
+                class="me-2 rounded-circle image-fluid"></td>
+            <td><ngb-highlight [result]="resource.resourceType "></ngb-highlight></td>
+            <td><ngb-highlight [result]="resource.supplierAvailable +' '+resource.type"></ngb-highlight></td>
+            <td>{{resource.active}}</td>
+            <td routerLink="/resource/{{resource.id}}"><button class="btn btn-sm btn-info">{{'RESOURCE_LIST.EDIT'|translate}}</button></td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
   </form>
 </div>
