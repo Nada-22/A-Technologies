@@ -1,12 +1,14 @@
 export interface Resource {
-  id: number,
+  id: any,
   name: string,
   booking: string,
   bookingMulti: 2,
   image: string,
   resourceType: string,
-  time: number,
-  timeType: string,
+  fixedTime: number,
+  supplierTime: string,
   type: string,
-  daysOfWeek:[]
+  supplierAvailable:number,
+  daysOfWeek:[],
+  active:boolean
   }

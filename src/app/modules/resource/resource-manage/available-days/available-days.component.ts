@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { reducers } from './../../../../store/index';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
@@ -12,6 +13,7 @@ export class AvailableDaysComponent implements OnInit {
   errorMessage = '';
   submitted = false;
   workDaysForm!: FormGroup;
+  @Input()resource:any;
 
   workDays = [
     { name: 'SATURDAY', active: false },
@@ -35,6 +37,14 @@ export class AvailableDaysComponent implements OnInit {
     this.workDays.forEach((day) => {
       this.addDay(day.name, day.active)
     })
+    if (this.resource) {
+
+      console.log(this.resource);
+      
+      this.workDaysForm.patchValue({...this.resource})
+      console.log(this.workDaysForm.value);
+      
+    }
   }
   get daysOfWeek(): FormArray {
     return this.workDaysForm.get('daysOfWeek') as FormArray;

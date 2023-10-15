@@ -52,7 +52,7 @@
                 <label for="user-name" class="mb-2"><small class="text-muted text-end">
                         {{'MANAGE_RESOURCE.SUPPLIER_DT.SUPPLIER_IS_AVAILABLE_FOR'|translate}}</small></label>
                 <div class="input-group mb-3">
-                    <input type="number" formControlName="availableRange" class="form-control counter"
+                    <input type="number" formControlName="supplierAvailable" class="form-control counter"
                         style="direction: rtl;" min="0">
                     <ng-select class="col-3" formControlName="type">
                         <ng-option>{{'MANAGE_RESOURCE.SUPPLIER_DT.DAY'|translate}}</ng-option>
@@ -68,14 +68,14 @@
                     </small>
                     <div class="d-lg-flex gap-2 align-items-center">
                         <div class="form-check form-check-inline col-lg-3 my-2">
-                            <input class="form-check-input" type="radio" formControlName="timeType" name="timeType"
+                            <input class="form-check-input" type="radio" formControlName="supplierTime" name="supplierTime"
                                 id="inlineRadio1" value="service_time">
                             <label class="form-check-label" for="inlineRadio1">
                                 <img src="../../../../../assets/images/box-time.png" class="me-2" width="15" alt="">
                                 <small>{{'MANAGE_RESOURCE.SUPPLIER_DT.SERVICE_TIME'|translate}}</small></label>
                         </div>
                         <div class="form-check form-check-inline col-lg-5 my-2">
-                            <input class="form-check-input" type="radio" name="timeType" formControlName="timeType"
+                            <input class="form-check-input" type="radio" name="supplierTime" formControlName="supplierTime"
                                 id="inlineRadio2" value="fixed">
                             <label class="form-check-label" for="inlineRadio2">
                                 <img src="../../../../../assets/images/clock.png" class="me-2" width="15" alt="">
@@ -83,12 +83,13 @@
                             </label>
                         </div>
                         <div class="d-flex position-relative counter-input col-lg-3 my-2"
-                            *ngIf="supplierForm.value.timeType=='fixed'">
+                            *ngIf="supplierForm.value.supplierTime=='fixed'">
                             <span class="input-group-btn position-absolute decrement">
                                 <button class="btn btn-sm btn-primary" (click)="decrement()">-</button>
                             </span>
                             <div class="form-control text-center counter-div">
-                                {{supplierForm.value.time}} minute
+                                {{supplierForm.value.fixedTime}}
+                                {{'MANAGE_RESOURCE.SUPPLIER_DT.MINUTE'|translate}} 
                             </div>
                             <span class="input-group-btn position-absolute increment">
                                 <button class="btn btn-sm btn-primary" (click)="increment()">+</button>

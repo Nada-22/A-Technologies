@@ -1,48 +1,35 @@
-<div class="m-5">
-    <form>
-        <!-- <div class="mb-3 row">
-          <label for="table-complete-search" class="col-xs-3 col-sm-auto col-form-label">Full text search:</label>
-          <div class="col-xs-3 col-sm-auto">
-            <input id="table-complete-search" type="text" class="form-control" name="searchTerm"
-             [(ngModel)]="service.searchTerm">
-          </div>
-          <span class="col col-form-label" *ngIf="service.loading$ | async">Loading...</span>
-        </div> -->
-        <a href="" class="btn btn-primary btn-sm" routerLink="/recourse/add">add resource</a>
-      
-        <table class="table table-striped">
-          <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col" sortable="name">name</th>
-             <th scope="col" sortable="area">resourceType</th>
-            <!--<th scope="col" sortable="population">Population</th> -->
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let resource of resources$|async">
-            <th scope="row">{{ resource.id }}</th>
-            <td>
-              <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + resource.img" class="me-2" style="width: 20px">
-              <ngb-highlight [result]="resource.name" ></ngb-highlight>
-            </td>
-             <td><ngb-highlight [result]="resource.resourceType " ></ngb-highlight></td>
-            <!--<td><ngb-highlight [result]="resource.population | number" ></ngb-highlight></td> -->
-          </tr>
-          </tbody>
-        </table>
-      
-        <!-- <div class="d-flex justify-content-between p-2">
-          <ngb-pagination
-            [collectionSize]="5" [(page)]="page" [pageSize]="pageSize">
-          </ngb-pagination>
-      
-          <select class="form-select" style="width: auto" name="pageSize" [(ngModel)]="pageSize">
-            <option [ngValue]="2">2 items per page</option>
-            <option [ngValue]="4">4 items per page</option>
-            <option [ngValue]="6">6 items per page</option>
-          </select>
-        </div> -->
-      
-      </form>
+<div class="">
+  <form class="p-5">
+    <div class="text-end">
+      <a class="btn btn-primary btn-sm my-4 " routerLink="/recourse/add">add resource</a>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col" sortable="name">name</th>
+          <th scope="col" sortable="name">image</th>
+          <th scope="col" sortable="area">resourceType</th>
+          <th scope="col" sortable="population">available time</th>
+          <th scope="col" sortable="population">active</th>
+          <th scope="col" sortable="population">actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resource of resources$|async;let i =index">
+          <td scope="row">{{ resource.id }}</td>
+          <td><ngb-highlight [result]="resource.name"></ngb-highlight></td>
+          <td><img [src]=" resource.image||'assets/images/user-profile-avatar.png' " width="30"
+              class="me-2 rounded-circle image-fluid"></td>
+          <td><ngb-highlight [result]="resource.resourceType "></ngb-highlight></td>
+          <td><ngb-highlight [result]="resource.supplierAvailable +' '+resource.type"></ngb-highlight></td>
+          <td>{{resource.active}}</td>
+          <td routerLink="/recourse/{{resource.id}}"><button class="btn btn-sm btn-info">edit</button></td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </form>
 </div>

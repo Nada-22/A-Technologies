@@ -13,7 +13,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { AvailableDaysComponent } from './resource-manage/available-days/available-days.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { ResourceEffects } from 'src/app/store/effects/resource.effects';
+// import { ResourceEffects } from 'src/app/store/effects/resource.effects';
 import { resourceReducer } from 'src/app/store/reducers/resource.reducer';
 
 
@@ -35,7 +35,7 @@ import { resourceReducer } from 'src/app/store/reducers/resource.reducer';
     NgSelectModule,
     ReactiveFormsModule,
     StoreModule.forFeature('resources', resourceReducer),
-    EffectsModule.forFeature([ResourceEffects]),
+    // EffectsModule.forFeature([ResourceEffects]),
     
   ]
 })

@@ -10,6 +10,7 @@ const routes: Routes = [
     { path: '',redirectTo:'list'},
     {path:"list", component :ResourcesListComponent},
     {path:"add", component :ResourceManageComponent},
+    {path:":id", component :ResourceManageComponent},
   ]},
 ];
 

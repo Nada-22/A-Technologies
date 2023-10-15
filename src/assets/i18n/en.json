@@ -20,7 +20,8 @@
             "SERVICE_TIME": "Service time",
             "FIXED_TIME": "Fixed time",
             "SINGLE_BOOKING": "Single Booking",
-            "BOOKING_MORE": "Booking more than one person for the same appointment"
+            "BOOKING_MORE": "Booking more than one person for the same appointment",
+            "MINUTE":"minute"
         },
         "AVAILABLE_DAYS": {
             "SATURDAY": "Saturday",

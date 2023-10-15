@@ -1,43 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 
 import { Resource } from '../shared/models/resource';
-import { RESOURCES } from '../shared/data/resources';
+
+import { Store } from '@ngrx/store';
+import { AppState } from '../store';
+import * as ResourceActions from '../store/actions/resource.action';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ResourceService {
 
-  constructor() { }
-  private resources: Resource[] = RESOURCES;
+  constructor(private store: Store<AppState>) {}
 
-  getResources(): Observable<Resource[]> {
-    return of(this.resources);
+  addResource(resource: Resource) {
+    this.store.dispatch(ResourceActions.addResource({ resource }));
   }
 
-  addResource(resource: Resource): Observable<Resource> {
-    
-    const newId = this.resources.length + 1;
-    console.log(resource,newId);
-    // resource.id = newId;
-    let newResource ={...resource,id:newId}
-    this.resources.push(newResource);
-    return of(newResource);
+  updateResource(resource: Resource) {
+    this.store.dispatch(ResourceActions.updateResource({ resource }));
   }
 
-  updateResource(resource: Resource): Observable<Resource> {
-    const existingResource = this.resources.find((t) => t.id === resource.id);
-    if (existingResource) {
-      Object.assign(existingResource, resource);
-    }
-    return of(resource);
-  }
-
-  deleteResource(id: number): Observable<void> {
-    const index = this.resources.findIndex((resource) => resource.id === id);
-    if (index !== -1) {
-      this.resources.splice(index, 1);
-    }
-    return of(undefined);
+  deleteResource(id: number) {
+    this.store.dispatch(ResourceActions.deleteResource({ id }));
   }
 }
